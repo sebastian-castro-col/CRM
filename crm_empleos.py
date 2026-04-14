@@ -21,7 +21,7 @@ import streamlit as st
 def _instalar_playwright():
     try:
         subprocess.run(
-            [sys.executable, "-m", "playwright", "install", "chromium"],
+            [sys.executable, "-m", "playwright", "install", "--with-deps", "chromium"],
             check=True, capture_output=True,
         )
     except Exception:
